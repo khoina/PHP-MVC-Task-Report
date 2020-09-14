@@ -11,11 +11,11 @@ $sql = "CREATE DATABASE IF NOT EXISTS mvcdemo;
         GameID varchar(255),
         Name varchar(255),
         Developer varchar (255),
-        Producer varchar (255),
+        Publisher varchar (255),
         Price float,
         Image varchar(255));
-        INSERT INTO Games VALUES ('G0001', 'ExampleGame1', 'ExampleBrand1', 'ExampleType1', 100, 'G0001');
-        INSERT INTO Games VALUES ('G0002', 'ExampleGame2', 'ExampleBrand2', 'ExampleType2', 299.9, 'G0002');";
+        INSERT INTO Games VALUES ('G0001', 'Enter the Gungeon', 'Dodge Roll', 'Devolver Digital', 14.99, 'G0001.jpg');
+        INSERT INTO Games VALUES ('G0002', 'Exit The Gungeon', 'Dodge Roll', 'Devolver Digital', 10, 'G0002.jpg');";
 if ($conn->multi_query($sql) === TRUE){
     echo "Task completed successful\n";
 }

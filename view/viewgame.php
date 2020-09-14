@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="container text-center ml-auto mr-auto bg-light rounded">
         <?php
-        echo "<div class='m-3'><img src='resources/". $game->image .".png' 
+        echo "<div class='m-3'><img src='resources/". $game->image ."' 
                     alt='Placeholder Pic' class='img-thumbnail' width='200' height'200'></div>";
         echo "Title: " . $game->name . "<br>";
         echo "Developer: " . $game->developer . "<br>";

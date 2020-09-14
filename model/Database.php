@@ -48,7 +48,7 @@ class Database
             $query->execute();
 
             foreach ($query->fetchAll() as $data){
-                $item = new Games($data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
+                $item = new Games($data[0], $data[1], $data[2], $data[3], "$" . $data[4], $data[5]);
                 array_push($games_list,$item);
             }
         } catch(PDOException $pdo_exception){
