@@ -7,14 +7,14 @@
     <div class="row align-center w-auto ml-auto mr-auto">
     <?php
     foreach($games as $key => $value){
-            echo "<div class='col bg-light rounded pl-3 pr-3'>";
+            echo "<div class='col bg-light rounded pl-3 pr-3 m-5'>";
             echo "<img src='resources/". $value->image ."' 
                     alt='Placeholder Pic' class='img-thumbnail' width='200' height'200'>";
             echo '<h3><a href="index.php?game=' . $value->name . '">' . $value->name . '</a></h3><br>';
             echo $value->id . '<br>';
-            echo $value->developer . '<br>';
-            echo $value->publisher .'<br>';
-            echo $value->price .'<br>';
+            echo "Developer: " . $value->developer . '<br>';
+            echo "Publisher: " . $value->publisher .'<br>';
+            echo "<h4>" . $value->price .'<br></h4>';
             echo "</div>";
         }
     ?></div></div>
