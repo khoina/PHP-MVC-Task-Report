@@ -4,10 +4,10 @@
 <body>
     <div class="container-fluid text-center h3 p-4 bg-info text-light">Product List</div>
     <div class="container-fluid text-center mt-4">
-    <div class="row align-center w-auto ml-auto mr-auto">
+    <div class="row align-center w-auto mx-auto">
     <?php
     foreach($games as $key => $value){
-            echo "<div class='col bg-light rounded pl-3 pr-3 m-5'>";
+            echo "<div class='col bg-light rounded pl-3 pr-3 m-2'>";
             echo "<img src='resources/". $value->image ."' 
                     alt='Placeholder Pic' class='img-thumbnail' width='200' height'200'>";
             echo '<h3><a href="index.php?game=' . $value->name . '">' . $value->name . '</a></h3><br>';

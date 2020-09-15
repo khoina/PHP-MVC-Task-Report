@@ -17,11 +17,10 @@ class GamesInteractor
                 $item = new Games($data[0], $data[1], $data[2], $data[3], "$" . $data[4], $data[5]);
                 array_push($games_list, $item);
             }
-            $db->disconnect();
         } catch (PDOException $pdo_exception) {
             echo "Error: " . $pdo_exception->getMessage() . "\n";
         }
-
+        $db->disconnect();
         return $games_list;
     }
 
@@ -33,5 +32,22 @@ class GamesInteractor
             if ($value->name == $name)
                 return $value;
         }
+    }
+
+    //Insert a game into the Database
+    public function addGame(Games $item){
+        try {
+            $db = new Database();
+            $db->connect();
+            //The INSERT query
+            $query ="INSERT INTO Games VALUES ('". $item->id."','". $item->name ."',
+                                            '". $item->developer ."','". $item->publisher ."',
+                                            ". $item->price .",'". $item->image ."');";
+            $db->getConnection()->exec($query);
+            echo "New item added successfully";
+        } catch (PDOException $pdo_exception) {
+            echo "Error: " . $pdo_exception->getMessage() . "\n";
+        }
+        $db->disconnect();
     }
 }

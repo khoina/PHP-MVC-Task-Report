@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__."/../model/GamesInteractor.php";
 
-class HomepageController
+class GameController
 {
     private $game_interact;
     public function __construct(){
@@ -13,6 +13,12 @@ class HomepageController
         $games = $this->game_interact->getGamesList();
 
         include 'view/game-list.php';
+    }
+
+    public function viewall_table(){
+        $games = $this->game_interact->getGamesList();
+
+        include "view/game-table.php";
     }
 
     //Find and get a specific game
