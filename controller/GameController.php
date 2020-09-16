@@ -23,7 +23,7 @@ class GameController
 
     //Find and get a specific game
     public function viewone(){
-        $game = $this->game_interact->getGame($_GET['game']);
+        $game = $this->game_interact->getGame($_GET['id']);
         include 'view/view-game.php';
     }
 }

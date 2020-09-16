@@ -25,11 +25,11 @@ class GamesInteractor
     }
 
     //Find and return a specific game
-    public function getGame($name)
+    public function getGame($id)
     {
         $games_list = $this->getGamesList();
         foreach ($games_list as $key => $value) {
-            if ($value->name == $name)
+            if ($value->id == $id)
                 return $value;
         }
     }

@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <link rel="stylesheet"
@@ -6,17 +7,18 @@
           crossorigin="anonymous">
 </head>
 <body>
-<?php
+<div class="container-fluid text-center h3 p-4 bg-dark text-light">Product Insert (via CSV)</div>
+<div class="container-fluid">
+    <div class="container text-center mx-auto bg-light rounded">
+        <form method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="input_csv">Import CSV file:</label>
+                <input type="file" name="input_csv" id="input_csv">
+            </div>
+            <input type="submit" value="submit" name="upload">
+        </form></div>
+</div>
 
-require_once "controller/GameController.php";
-
-$controller = new GameController();
-
-if (!isset($_GET['id']))
-    $controller->viewall();
-else
-    $controller->viewone();
-?>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -28,4 +30,3 @@ else
         crossorigin="anonymous"></script>
 </body>
 </html>
-

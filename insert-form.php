@@ -1,6 +1,8 @@
 <?php
 require_once ("controller/GameInsertController.php");
 session_start();
+
+//TODO: id must not be duplicate
 ?>
 
 <html>
@@ -15,6 +17,12 @@ session_start();
             $insert_controller->includeform();
             if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $insert_controller->addgame();
+            }
+        }
+        if($_GET["insert_interact"] == "Insert via csv"){
+            $insert_controller->includecsv();
+            if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                $insert_controller->addgame_csv();
             }
         }
     }

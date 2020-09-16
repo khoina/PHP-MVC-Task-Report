@@ -10,7 +10,7 @@
             echo "<div class='col bg-light rounded pl-3 pr-3 m-2'>";
             echo "<img src='resources/". $value->image ."' 
                     alt='Placeholder Pic' class='img-thumbnail' width='200' height'200'>";
-            echo '<h3><a href="index.php?game=' . $value->name . '">' . $value->name . '</a></h3><br>';
+            echo '<h3><a href="index.php?id=' . $value->id . '">' . $value->name . '</a></h3><br>';
             echo $value->id . '<br>';
             echo "Developer: " . $value->developer . '<br>';
             echo "Publisher: " . $value->publisher .'<br>';
