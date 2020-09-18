@@ -17,7 +17,11 @@
             echo "<h4>" . $value->price .'<br></h4>';
             echo "</div>";
         }
-    ?></div></div>
+    ?></div>
+    <div>
+        <form action="cart.php"><input type="submit" value="To cart"></form>
+    </div>
+    </div>
 
 
 </body>

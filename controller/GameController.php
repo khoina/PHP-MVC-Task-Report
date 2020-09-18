@@ -26,4 +26,11 @@ class GameController
         $game = $this->game_interact->getGame($_GET['id']);
         include 'view/view-game.php';
     }
+
+    public function addcart($id){
+        array_push($_SESSION["cart"], $id);
+        header("Location:index.php");
+        $game = $this->game_interact->getGame($id)->price;
+        echo $game;
+    }
 }

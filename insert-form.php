@@ -24,7 +24,8 @@ session_start();
             if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $insert_controller->addgame_csv();
             }
-        }
+        } else
+            echo "<div><h3>Invalid Access!</h3></div>";
     }
     else{
         echo "<div class='container-fluid text-center text-danger font-weight-bold h3 p-5'><div>

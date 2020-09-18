@@ -7,19 +7,15 @@
 </head>
 <body>
 <?php
-require_once "controller/GameController.php";
+require_once "controller/CartController.php";
 session_start();
-$controller = new GameController();
+$controller = new CartController();
 if(!isset($_SESSION["cart"])){
     $_SESSION["cart"] = array();
 }
 
 
-if (!isset($_GET['id']))
-    $controller->viewall();
-else
-    $controller->viewone();
-?>
+$controller->showlist();?>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

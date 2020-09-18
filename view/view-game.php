@@ -1,3 +1,9 @@
+<?php
+if(array_key_exists('add_cart', $_POST)) {
+    $this->addcart($game->id);
+}
+?>
+
 <html>
 <head>
 </head>
@@ -11,7 +17,9 @@
         echo "Title: " . $game->name . "<br>";
         echo "Developer: " . $game->developer . "<br>";
         echo "Publisher: " . $game->publisher . "<br>";
-        ?></div>
+        ?>
+        <form method="post"><input type="submit" name="add_cart" value="Add to Cart"></form>
+    </div>
 </div>
 
 
